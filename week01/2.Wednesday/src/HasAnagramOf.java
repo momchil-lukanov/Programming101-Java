@@ -1,7 +1,7 @@
 
-public class Anagram {
+public class HasAnagramOf {
 	
-	public static boolean anagram(String a, String b){
+	public static boolean hasAnagramOf(String a, String b) {
 		
 		a = a.toLowerCase();
 		b = b.toLowerCase();
@@ -18,15 +18,24 @@ public class Anagram {
 					a = a1 + "*" + a2;
 					b = b1 + "*" + b2;
 				}
-
 			}
 		}
 
-		return a.equals(b);
+		for (int i = 0; i < b.length(); i++) {
+			Character sth = b.charAt(i);
+			if (!sth.equals('*')) {
+				return false;
+			}
+		}
+		
+		return true;
+		
+		
 	}
 
 	public static void main(String[] args) {
-		System.out.println(anagram("army", "mary"));
+		System.out.println(hasAnagramOf("armpar", "mary"));
+
 	}
 
 }
