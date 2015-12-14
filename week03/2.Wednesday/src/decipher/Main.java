@@ -1,10 +1,13 @@
 package decipher;
 
+import java.util.List;
+import java.util.Map;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// Kodat shte bade kachen, samo da slusham po vreme na zanyatieto
-
+		Map<Character, Integer> map = HistogramCreator.getHistogram("bcdaab");
+		List<Character> charList = MapUtil.sortByValue(map);
+		System.out.println(charList);
 	}
-
 }

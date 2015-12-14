@@ -3,12 +3,12 @@ package myHashMap;
 public class Entry {
 	private String _key;
 	private Integer _value;
-	
-	public Entry(String key, Integer value){
+
+	public Entry(String key, Integer value) {
 		setKey(key);
 		setValue(value);
 	}
-
+	
 	public String getKey() {
 		return _key;
 	}
