@@ -25,5 +25,11 @@ public class Student {
 		this.name = name;
 		this.grade = grade;
 	}
+	
+	public String toString(){
+		String result = "";
+		result = "(" + this.name + ", " + this.grade + ")";
+		return result;
+	}
 
 }
